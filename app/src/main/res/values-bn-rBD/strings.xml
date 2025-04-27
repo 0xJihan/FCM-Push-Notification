@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App Name</string>
+
+    <string name="hello_android">হ্যালো অ্যান্ড্রয়েড</string>
+    <string name="goToLoginScreen">লগইন স্ক্রীনে যান</string>
+    <string name="profile_screen">প্রোফাইল স্ক্রীন</string>
+    <string name="enable_dynamic_theme">ডাইনামিক থিম সক্রিয় করবেন?</string>
+    <string name="yes">হ্যাঁ</string>
+    <string name="no">না</string>
+    <string name="system">সিস্টেম</string>
+    <string name="light">আলো</string>
+    <string name="dark">অন্ধকার</string>
+    <string name="base_theme">বেস থিম</string>
+    <string name="themes">থিম</string>
+    <string name="show_label">লেবেল দেখান</string>
+    <string name="choose_language">ভাষা নির্বাচন করুন</string>
+    <string name="no_internet">দয়া করে আপনার ইন্টারনেট সংযোগ চেক করুন</string>
+    <string name="status_online">অনলাইন</string>
+
+
+</resources>
