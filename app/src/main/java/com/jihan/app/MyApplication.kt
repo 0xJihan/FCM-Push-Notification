@@ -13,6 +13,9 @@ import com.onesignal.debug.LogLevel
 import com.onesignal.notifications.INotificationClickEvent
 import com.onesignal.notifications.INotificationClickListener
 import com.onesignal.notifications.IPermissionObserver
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -35,6 +38,14 @@ class MyApplication : Application() {
 
         subscribeToTopic("general")
 
+        CoroutineScope(Dispatchers.Main).launch {
+
+            if (OneSignal.Notifications.canRequestPermission) {
+                OneSignal.Notifications.requestPermission(true)
+            }
+
+
+        }
 
         setupNotificationHandlers()
 
@@ -78,8 +89,7 @@ class MyApplication : Application() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val carouselChannel = NotificationChannel(
                 "carousel_channel", // ← This ID must match exactly what you use in API calls
-                "Carousel Notifications",
-                NotificationManager.IMPORTANCE_DEFAULT
+                "Carousel Notifications", NotificationManager.IMPORTANCE_DEFAULT
             ).apply {
                 description = "Notifications with multiple images"
             }
