@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     id("com.google.devtools.ksp") version "2.1.10-1.0.29"
     kotlin("plugin.serialization") version "2.1.0"
+    id("com.google.gms.google-services")
 
 
 }
@@ -111,7 +112,18 @@ dependencies {
     implementation(libs.computils)
     implementation(libs.lucide.icons)
 
- 
+    implementation(platform("com.google.firebase:firebase-bom:33.13.0"))
+
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-messaging")
+    implementation("com.google.firebase:firebase-firestore")
+//    implementation("com.google.auth:google-auth-library-oauth2-http:1.30.1")
+
+
+    //!One Signal
+
+    implementation("com.onesignal:OneSignal:5.1.32")
+
 
 }
 
