@@ -32,7 +32,7 @@ class MyApplication : Application() {
         createNotificationChannels()
         ComposeTheme.register(*ComposeThemes.ALL.toTypedArray())
 
-        OneSignal.initWithContext(this, "d139b265-9bec-42c3-8de8-04f54c78d0ca")
+        OneSignal.initWithContext(this, Constants.API_KEY)
 
         OneSignal.Debug.logLevel = LogLevel.VERBOSE
 
