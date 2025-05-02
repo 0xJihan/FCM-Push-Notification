@@ -46,14 +46,6 @@ class MainActivity : ComponentActivity() {
     }
 
 
-    @Composable
-    private fun SetLanguage(language: String) {
-        val locale = Locale(language)
-        val configuration = LocalConfiguration.current
-        configuration.setLocale(locale)
-        val displayMetrics = this.resources.displayMetrics
-        resources.updateConfiguration(configuration, displayMetrics)
-    }
 
     // Declare the launcher at the top of your Activity/Fragment:
     private val requestPermissionLauncher = registerForActivityResult(
