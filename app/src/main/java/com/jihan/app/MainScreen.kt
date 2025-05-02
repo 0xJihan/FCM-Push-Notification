@@ -50,6 +50,8 @@ fun MainScreen(navigate:(Routes)-> Unit) {
     var selectedPosition by remember { mutableIntStateOf(0) }
 
 
+        
+
     Scaffold(Modifier
         .fillMaxSize()
         .background(MaterialTheme.colorScheme.background), bottomBar = {
